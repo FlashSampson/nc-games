@@ -21,7 +21,7 @@ const [reviews, setReviews] = useState([])
     
     return <section>
         <h2>Reviews</h2>
-        <ul> 
+        <ul className='lists'> 
         {reviews.map(review => {             
                     return <li key={review.review_id}>  
                      <ReviewCard Reviews={review}/>                                               

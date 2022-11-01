@@ -19,4 +19,12 @@ export const fetchReviews = () =>{
     })
 }
 
+export const fetchReviewsByCategory = () =>{
+    // return ncGamesAPI.get(`/reviews?${category}`)
+    // .then(({data})=>{
+    //     console.log(data)
+    //     return data
+    // })
+
+}
 

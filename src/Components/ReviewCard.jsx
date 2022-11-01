@@ -9,7 +9,7 @@ const ReviewCard = ({Reviews}) =>{
 
 
 return (
-    <div >
+    <div className="list">
         <img className="Review-picture" src={review_img_url}/>
         <p>Username: {owner}</p> 
         <p>{review_body}</p>

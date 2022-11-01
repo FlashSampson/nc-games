@@ -28,8 +28,10 @@ return <section>
         
     {users.map(user => {
         
-                return <li key={user.username}>             
-                        <UserCard givenUser={user}/>                
+                return <li key={user.username}>   
+                        {<Link to="/Reviews">
+                        <UserCard givenUser={user}/>
+                    </Link>}                   
                 </li>
                
             })}

@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.Review-picture{
+  width:5vw;
+  height: auto;
+  border-radius: 50%;
+}

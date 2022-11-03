@@ -4,8 +4,8 @@ import { Login } from "./Components/Login";
 import { useState } from "react";
 import { UserContext } from "./UserContext";
 import { Reviews } from "./Components/Reviews";
-import { ReviewCategories } from "./Components/ReviewCategoriesCard";
 import { ReviewOptions } from "./Components/ReviewOptions";
+import { SingleReview } from "./Components/SingleReview";
 
 function App() {
   const [user, setUser] = useState("user");
@@ -18,7 +18,8 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/Reviews" element={<Reviews />} />
             <Route path="/Reviews/Options" element={<ReviewOptions />} />
-            <Route path="/category/:categoryname" element={<Reviews/>}/>
+            <Route path="/category/:categoryname" element={<Reviews />} />
+            <Route path="/category/:reviewID" element={<SingleReview />} />
           </Routes>
         </div>
       </BrowserRouter>

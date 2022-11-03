@@ -2,7 +2,7 @@ import { BrowserRouter, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { fetchUsers } from '../API'
 import UserCard from './UserCard'
-import { Header } from './Header'
+
 
 
 

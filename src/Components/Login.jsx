@@ -2,7 +2,7 @@ import { BrowserRouter, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { fetchUsers } from '../API'
 import UserCard from './UserCard'
-import { Header } from './Header'
+
 
 
 
@@ -28,8 +28,10 @@ return <section>
         
     {users.map(user => {
         
-                return <li key={user.username}>             
-                        <UserCard givenUser={user}/>                
+                return <li key={user.username}>   
+                        {<Link to="/Reviews">
+                        <UserCard givenUser={user}/>
+                    </Link>}                   
                 </li>
                
             })}

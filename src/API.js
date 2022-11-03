@@ -13,10 +13,20 @@ export const fetchUsers = () =>{
 
 
 export const fetchReviews = () =>{
-    return ncGamesAPI.get('/reviews')
+    return ncGamesAPI.get(`/reviews`)
     .then(({data})=>{
         return data
     })
 }
 
+export const fetchReviewsByCategory = (categoryname) =>{
+    return ncGamesAPI.get(`/reviews?category=${categoryname}`)
+    .then(({data})=>{
+        return data
+    })
+
+}
+//could refactor fetchReviews and fetch reviews by category into one function
+
+fetchReviewsByCategory()
 

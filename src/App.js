@@ -4,7 +4,6 @@ import { Login } from "./Components/Login";
 import { useState } from "react";
 import { UserContext } from "./UserContext";
 import { Reviews } from "./Components/Reviews";
-import { ReviewCategories } from "./Components/ReviewCategoriesCard";
 import { ReviewOptions } from "./Components/ReviewOptions";
 
 function App() {

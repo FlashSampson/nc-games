@@ -15,6 +15,7 @@ return (
         <img className="Review-picture" src={review_img_url}/>
         <p>Username: {owner}</p>
             <p>Category: {category}</p>
+            <p>Title: {title}</p>
         <p>{review_body}</p>
 
     </div>

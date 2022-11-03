@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 
 const ReviewCard = ({Reviews}) =>{
@@ -11,12 +11,15 @@ const ReviewCard = ({Reviews}) =>{
 
 
 return (
-    <div className="list">
+    <div className="boxes">
+        <Link to={`/reviews/${review_id}`} >
         <img className="Review-picture" src={review_img_url}/>
-        <p>Username: {owner}</p>
-            <p>Category: {category}</p>
-            <p>Title: {title}</p>
-        <p>{review_body}</p>
+        <h3>Read review : {title}</h3>
+        </Link>
+        <h4>Username: {owner}</h4>
+            <h4>Category: {category}</h4>
+        <p className="text-box" >{review_body}</p>
+        
 
     </div>
     )

@@ -28,5 +28,9 @@ export const fetchReviewsByCategory = (categoryname) =>{
 }
 //could refactor fetchReviews and fetch reviews by category into one function
 
-fetchReviewsByCategory()
-
+export const fetchReviewsByID = (review_id) =>{
+    return ncGamesAPI.get(`/reviews/${review_id}`)
+    .then(({data})=>{
+        return data
+    })
+}

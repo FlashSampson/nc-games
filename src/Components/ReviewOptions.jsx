@@ -32,7 +32,7 @@ setCategories(uniquecategoryOptions)
 
     return <section className="grid">
     <h2>Review categories</h2>
-    <div id="container">
+    <div id="boxes">
     <ul className='lists'> 
     {category.map(category => {           
                 return <li className="boxes" id="link" key={category}>  

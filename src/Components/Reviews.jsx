@@ -1,7 +1,8 @@
 import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { fetchReviews, fetchReviewsByCategory } from '../API'
+import { fetchReviews, fetchReviewsByCategory, fetchReviewsByID } from '../API'
 import ReviewCard from './ReviewCard'
+
 
 
 
@@ -11,13 +12,7 @@ export const Reviews = () =>{
 const [reviews, setReviews] = useState([])
 
 
-
-const retrievedParam = useParams() 
-
-const {categoryname} = retrievedParam
-
-
-
+const {categoryname} = useParams() 
 
 
     useEffect(()=>{
@@ -28,8 +23,8 @@ const {categoryname} = retrievedParam
                 setReviews(reviews)
                 setIsLoading(false)
             })
-        }
-        else {
+        
+     } else {
             fetchReviewsByCategory(categoryname).then((reviews)=>{
                 setReviews(reviews)
                 setIsLoading(false)

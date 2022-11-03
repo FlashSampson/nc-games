@@ -11,14 +11,14 @@ const ReviewCard = ({Reviews}) =>{
 
 
 return (
-    <div className="list">
-        <Link to={`/reviews?category=${category}`} >
+    <div className="boxes">
+        <Link to={`/reviews/${review_id}`} >
         <img className="Review-picture" src={review_img_url}/>
-        <p>ID: {review_id}</p>
+        <h3>Read review : {title}</h3>
         </Link>
-        <p>Username: {owner}</p>
-            <p>Category: {category}</p>
-        <p>{review_body}</p>
+        <h4>Username: {owner}</h4>
+            <h4>Category: {category}</h4>
+        <p className="text-box" >{review_body}</p>
         
 
     </div>

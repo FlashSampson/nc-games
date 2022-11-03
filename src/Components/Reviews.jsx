@@ -1,7 +1,8 @@
-import { BrowserRouter, Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { fetchReviews } from '../API'
+import { fetchReviews, fetchReviewsByCategory } from '../API'
 import ReviewCard from './ReviewCard'
+
 
 
 export const Reviews = () =>{
@@ -9,22 +10,44 @@ export const Reviews = () =>{
     const [isLoading, setIsLoading] = useState(true)
 const [reviews, setReviews] = useState([])
 
+
+
+const retrievedParam = useParams() 
+
+const {categoryname} = retrievedParam
+
+
+
+
+
     useEffect(()=>{
         setIsLoading(true)
-        fetchReviews().then((reviews)=>{
-            setReviews(reviews)
-            setIsLoading(false)
-        })
+        if (categoryname === undefined){
+
+            fetchReviews().then((reviews)=>{
+                setReviews(reviews)
+                setIsLoading(false)
+            })
+        }
+        else {
+            fetchReviewsByCategory(categoryname).then((reviews)=>{
+                setReviews(reviews)
+                setIsLoading(false)
+            })
+        }
     },[])
     
     if (isLoading) return <h2>Loading...</h2>
-    
+
+      
     return <section>
-        <h2>Reviews</h2>
+        <Link to={'/Reviews/Options'}>
+        <h2>Review categories</h2>
+        </Link>
         <ul className='lists'> 
         {reviews.map(review => {             
                     return <li key={review.review_id}>  
-                     <ReviewCard Reviews={review}/>                                               
+                     <ReviewCard Reviews={review}/>                                          
                     </li>                 
                 })}
               

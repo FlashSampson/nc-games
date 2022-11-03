@@ -12,7 +12,6 @@ export const HomePage = () =>{
     useEffect(()=>{
         setIsLoading(true)
         fetchReviews().then((reviews)=>{
-            console.log(reviews)
             setReviews(reviews)
             setIsLoading(false)
         })

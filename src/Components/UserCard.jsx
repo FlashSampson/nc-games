@@ -11,10 +11,10 @@ const UserCard = ({givenUser}) => {
     }
 
     return (
-    <div onClick={() => handleChangeUser(username)}>
+    <section className='login icons' onClick={() => handleChangeUser(username)}>
         <img className="login-user-avatar" src={avatar_url}/>
         <h2>{username}</h2>
-    </div>
+    </section>
     )
 
 }

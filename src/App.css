@@ -132,4 +132,12 @@ link:hover {
   
 }
 
+.login-icons{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: inherit;
+}
+
 

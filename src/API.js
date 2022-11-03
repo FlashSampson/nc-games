@@ -34,3 +34,12 @@ export const fetchReviewsByID = (review_id) =>{
         return data
     })
 }
+
+export const patchVote = (review_id) =>{
+    return ncGamesAPI.patch(`/reviews/${review_id}`)
+    .then(({data})=>{
+        return data
+    })
+}
+
+

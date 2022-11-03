@@ -27,7 +27,9 @@ return <section className="boxes">
     <h4>by {designer}</h4>
     <img className="Review-picture" src={review_img_url} alt="review img" />
     <p>{review_body}</p>
+    <button>⬆</button>
     <h4>Votes : {votes}</h4>
+    <button>⬇</button>
 
 
 

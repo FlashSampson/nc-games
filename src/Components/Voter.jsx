@@ -22,11 +22,11 @@ export const Voter = ({votes}) =>{
         setVoteCount(() => voteCount - 1);
         patchVoteCount(review_id, voteCount).catch((err)=>{
             setVoteCount(() => voteCount + 1);
-            setErr('Something went wrong, please try again.');
+            setErr('Something went wrong, please try again 😱');
         }); ;
       };
     
-      if (err) return <p>{err}</p>;
+      if (err) return <p className="err">{err}</p>;
 
     return <section className="boxes">
     <button onClick={HandleUpVote} disabled={voteCount === 1} >⬆</button>

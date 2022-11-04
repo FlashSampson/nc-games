@@ -140,4 +140,8 @@ link:hover {
   flex-grow: inherit;
 }
 
+.err{
+  font-weight: bolder;
+}
+
 

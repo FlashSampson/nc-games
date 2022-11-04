@@ -17,12 +17,12 @@ const {review_id} = useParams()
                 setComments(comments)
         }).catch((err)=>{
             setIsLoading(false)
-            setErr('No one has made a comment yet 😥');
+            setErr('No one has made a comment yet ! 😥');
         })
     },[])
     
     if (isLoading) return <h2>Loading...</h2>
-    if (err) return <p>{err}</p>;
+    if (err) return <p className="err">{err}</p>;
 
 
     return  <section>

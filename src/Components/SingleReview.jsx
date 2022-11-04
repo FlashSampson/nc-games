@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchReviewsByID} from "../API"
 import { Voter } from "./Voter"
+import { CommentCard } from "./CommentCard"
 
 export const SingleReview = ()=>{
     
@@ -29,6 +30,7 @@ return <section className="boxes">
     <img className="Review-picture" src={review_img_url} alt="review img" />
     <p>{review_body}</p>
   <Voter votes={votes}/>
+  <CommentCard/>
 </section>
 
 }

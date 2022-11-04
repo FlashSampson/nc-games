@@ -43,4 +43,9 @@ export const patchVoteCount = (review_id, voteCount) =>{
     })
 }
 
-
+export const fetchComments = (review_id) =>{
+    return ncGamesAPI.get(`/reviews/${review_id}/comments`)
+    .then(({data})=>{
+        return data
+    })
+}

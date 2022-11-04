@@ -35,8 +35,9 @@ export const fetchReviewsByID = (review_id) =>{
     })
 }
 
-export const patchVote = (review_id) =>{
-    return ncGamesAPI.patch(`/reviews/${review_id}`)
+export const patchVoteCount = (review_id, voteCount) =>{
+    const votesIncrement = {inc_votes:voteCount} 
+    return ncGamesAPI.patch(`/reviews/${review_id}`, votesIncrement)
     .then(({data})=>{
         return data
     })

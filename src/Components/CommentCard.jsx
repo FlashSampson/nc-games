@@ -16,6 +16,7 @@ const {review_id} = useParams()
                 setIsLoading(false)
                 setComments(comments)
         }).catch((err)=>{
+            setIsLoading(false)
             setErr('No one has made a comment yet 😥');
         })
     },[])

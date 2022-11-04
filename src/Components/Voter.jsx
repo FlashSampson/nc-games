@@ -12,7 +12,7 @@ export const Voter = ({votes}) =>{
     const HandleUpVote = () => {
         setErr(null)
         setVoteCount(() => voteCount + 1);
-        patchVoteCount(review_id, voteCount).catch((err)=>{
+        patchVoteCount(review_id, 1).catch((err)=>{
             setVoteCount(() => voteCount - 1);
             setErr('Something went wrong, please try again.');
         });
@@ -20,13 +20,13 @@ export const Voter = ({votes}) =>{
     
       const HandleDownVote = () => {
         setVoteCount(() => voteCount - 1);
-        patchVoteCount(review_id, voteCount).catch((err)=>{
+        patchVoteCount(review_id, -1).catch((err)=>{
             setVoteCount(() => voteCount + 1);
             setErr('Something went wrong, please try again.');
-        }); ;
-      };
-    
-      if (err) return <p>{err}</p>;
+          }); ;
+        };
+        
+        if (err) return <p>{err}</p>;
 
     return <section className="boxes">
     <button onClick={HandleUpVote} disabled={voteCount === 1} >⬆</button>
